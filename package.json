@@ -1,5 +1,5 @@
 {
-  "name": "react-boilerplate",
+  "name": "voting-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,6 +13,7 @@
     "styled-components": "^3.1.6"
   },
   "devDependencies": {
+    "concurrently": "^3.5.1",
     "flow-bin": "^0.63.1"
   },
   "scripts": {
@@ -20,6 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "flow": "flow"
-  }
+    "flow": "flow",
+    "server": "npm run start --prefix backend",
+    "dev": "concurrently \"npm run start\" \"npm run server\""
+  },
+  "proxy": "http://localhost:8080"
 }
