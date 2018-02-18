@@ -1,8 +1,11 @@
-import express from "express"
-import mongoose from "mongoose"
-import bodyParser from "body-parser"
+const express = require("express")
+const mongoose = require("mongoose")
+const bodyParser = require("body-parser")
+require("./services/passport")
 
 const app = express()
 app.use(bodyParser.json())
+require("./routes/authRoutes")(app)
 
-app.listen(8080, () => console.log("Server is running on localhost:8080"))
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => console.log("Server is running on", PORT))
