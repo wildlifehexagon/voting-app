@@ -5,7 +5,7 @@
 # Voting App
 Full stack voting app.
 
-Live Demo: (coming soon)
+Live Demo: [Heroku](https://nameless-sands-44655.herokuapp.com/)
 
 Built with React, Redux and Styled-Components on the front end. Node.js, Express and MongoDB on the back end.
 
