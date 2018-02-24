@@ -1,12 +1,17 @@
 import React, { Component } from "react"
-import { CenteredText } from "../styles"
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import Header from "./Header"
+import Home from "./Home"
 
 class App extends Component {
   render() {
     return (
-      <CenteredText>
-        <p>This is the App component</p>
-      </CenteredText>
+      <div>
+        <Header />
+        <Router>
+          <Route exact path="/" component={Home} />
+        </Router>
+      </div>
     )
   }
 }
