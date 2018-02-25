@@ -1,7 +1,12 @@
 import React from "react"
 
 const Home = () => {
-  return <h2>homepage</h2>
+  return (
+    <div>
+      <h1>Voting App</h1>
+      <p>this is the homepage</p>
+    </div>
+  )
 }
 
 export default Home

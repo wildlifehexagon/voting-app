@@ -2,7 +2,16 @@
   "name": "voting-app",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "/auth/google": {
+      "target": "http://localhost:8080"
+    },
+    "/api/*": {
+      "target": "http://localhost:8080"
+    }
+  },
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
@@ -10,6 +19,7 @@
     "react-scripts": "^1.1.0",
     "rebass": "^1.0.4",
     "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
     "styled-components": "^3.1.6"
   },
   "devDependencies": {
@@ -24,6 +34,5 @@
     "flow": "flow",
     "server": "npm run start --prefix backend",
     "dev": "concurrently \"npm run start\" \"npm run server\""
-  },
-  "proxy": "http://localhost:8080"
+  }
 }

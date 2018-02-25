@@ -1,13 +1,13 @@
-import styled, { injectGlobal } from 'styled-components'
+import styled, { injectGlobal } from "styled-components"
 
 injectGlobal`
     body {
-        margin: 0;
+        margin: auto;
         padding: 0;
         font-family: sans-serif;
     }
 `
 
 export const CenteredText = styled.div`
-    text-align: center;
+  text-align: center;
 `

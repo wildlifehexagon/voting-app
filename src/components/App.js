@@ -1,19 +1,23 @@
 import React, { Component } from "react"
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { connect } from "react-redux"
+import { Route } from "react-router-dom"
+import * as actions from "../actions"
 import Header from "./Header"
 import Home from "./Home"
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchUser()
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <Router>
-          <Route exact path="/" component={Home} />
-        </Router>
+        <Route exact path="/" component={Home} />
       </div>
     )
   }
 }
 
-export default App
+export default connect(null, actions)(App)
